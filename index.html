@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hàng Rông 4.0</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">   
+    <style>
+        *{
+            margin: 0px;
+        }
+
+        /* CSS của phần menu bar */
+        .menuBar{
+            width: 100%;
+            height: 45px;
+            background-color: #4d4dff;
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .container{
+            width: 950px;
+            height: 45px;
+            overflow: hidden;
+        }
+        .logo{
+            width: 45px;
+            height: 45px;
+            background-image: url(Asset/Logo3.png);
+            background-size: cover;
+            position: relative;
+            display: inline-block;
+            top: 2px;
+        }
+        .brand{
+            font-size: 18px;
+            position: relative;
+            display: inline-block;
+            bottom: 14px;
+            color: white;
+            font-family: 'Pacifico', cursive;
+        }
+        .brand::before{
+            border-left: white solid 1px;
+            content: ' ';
+            margin-right: 12px;
+            font-size: 12px;
+            padding-top: 5px;
+        }
+        .buttonContainer{
+            height: 45px;
+            width: 400px ;
+            display: inline-block;
+        }
+        .button{
+            font-size: 15px;
+            display: inline-block;
+            padding-top: 5px;
+            color: white;
+            padding-bottom: 12px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .button:hover{
+            background-color: #9999ff;
+        }
+
+
+        /* CSS của phần content */
+        .gridContainer{
+            position: relative;
+            top: 50px;
+            display: grid;
+            grid-template-columns: 10% 65% 25%;
+            grid-template-rows: 220px 500px 100px;
+        }
+        .gridContainer div{
+            background-color: crimson;
+            border: solid 1px black;
+        }
+        .leftSide{
+            grid-column: 1/ span 1;
+            grid-row: 1/ span 2;
+        }
+        .gallery{
+            grid-column: 2/ span 1;
+            grid-row: 1/ span 1;
+        }
+        .content{
+            grid-column: 2/ span 1;
+            grid-row: 2/ span 1;
+        }
+        .bestSell{
+            grid-column: 3/ span 1;
+            grid-row: 1/ span 2;
+        }
+        .footer{
+            grid-column: 1/ span 3;
+            grid-row: 3/ span 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="menuBar">
+        <div class="container">
+            <div class="logo"></div>
+            <div class="brand">Hàng Rông 4.0</div>
+            <div class="buttonContainer">
+                <div class="button">Home</div>
+                <div class="button">Purchase</div>
+            </div>
+            <div class="searchBoard"></div>
+        </div>
+    </div>
+    <div class="gridContainer">
+        <div class="gallery">gallery</div>
+        <div class="content">content</div>
+        <div class="bestSell">bestSell</div>
+        <div class="footer">footer</div>
+        <div class="leftSide">leftSide</div>
+    </div>
+</body>
+</html>
